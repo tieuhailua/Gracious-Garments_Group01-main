@@ -1,0 +1,1116 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Be$t Price</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/mainController.js"></script>
+
+    <!-- CSS
+	============================================ -->
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="assets/css/icons.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+<header class="header-area header-in-container clearfix">
+    <div class="header-top-area">
+        <div class="container">
+            <div class="header-top-wap">
+                <div class="language-currency-wrap">
+                    <div class="same-language-currency">
+                        <p>Call Us 3965410</p>
+                    </div>
+                </div>
+                <div class="header-offer">
+                    <p>Free delivery and <span>discount 20%</span> over $300</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom sticky-bar header-res-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+                    <div class="logo">
+                        <a href="index.html"><img alt="" src="images/logo/logo.png" width="85px" weight="20px"></a>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">Home <i class="fa fa-angle"></i></a></li>
+                                <li><a href="shop.html"> Shop <i class="fa fa-angle"></i> </a></li>
+                                <li><a href="blog.html">Blog <i class="fa fa-angle"></i></a></li>
+                                <li><a href="about.html"> About </a></li>
+                                <li><a href="contact.html"> Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+                    <div class="header-right-wrap">
+                        
+                        <div class="same-style account-satting">
+                            <a class="account-satting-active" href="#"><i class="pe-7s-user-female"></i></a>
+                            <div class="account-dropdown">
+                                <ul>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="register.html">Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="same-style cart-wrap">
+                            <button class="icon-cart">
+                                <i class="pe-7s-shopbag"></i>
+                                <span class="count-style">0</span>
+                            </button>
+                            <div class="shopping-cart-content" style="overflow-y: scroll; height: 300px; border: none;">
+                                <ul ng-click="Delete(car, $event)"></ul>
+                                <div class="shopping-cart-total">
+                                    <!-- <h4>Shipping : <span>$20.00</span></h4> -->
+                                    <h4>Total : <span class="shop-total">$0.00</span></h4>
+                                </div>
+                                <div class="shopping-cart-btn btn-hover text-center">
+                                        <a class="default-btn" href="cart-page.html">view cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="breadcrumb-area pt-35 pb-35 bg-gray-3">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active">Shop </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="shop-area pt-95 pb-100">
+    <div class="container">
+        <div class="row flex-row-reverse">
+            <div class="col-lg-9">
+                <div class="shop-top-bar">
+                    <div class="select-shoing-wrap">
+                        <p>Showing 1–9 of 9 result</p>
+                    </div>
+                </div>
+                <div class="shop-bottom-area mt-35">
+                    <div class="jump">
+                        <div id="product--list" class="product-list">
+                            <div class="row">
+                                <div class="col-xl-4 col-md-6 col-lg-6 col-sm-6 product--item" data-categories="male" data-size="size-s" data-styles="t-shirt" data-brand="gucci">
+                                    <div class="product-wrap mb-25">
+                                        <div class="product-img">
+                                            <a href="product-details-8.html">
+                                                <img class="default-img" src="images/home/male-product-2.png" ng-model="carModel.id" ng-bind="carModel.id">
+                                                <img class="hover-img" src="images/home/male-product-2-1.png" alt="">
+                                            </a>
+                                            <span class="purple">Best Seller</span>
+                                            <div class="product-action">
+                                                <div class="pro-same-action pro-cart add-cart">
+                                                    <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                                </div>
+                                                <button type="button" class="btn-compare" data="8">Compare</button>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3 class="male"><a class="t-shirt" href="product-details-8.html" ng-model="carModel.brand" ng-bind="carModel.brand">Long-Hand T-shirt </a></h3>
+                                            <h5 class="gucci">Gucci</h5>
+                                            <div class="product-price">
+                                                <span class="size-m" ng-model="carModel.price" ng-bind="'$' + carModel.price + '.00'">$42.00</span>
+                                            </div>
+                                        </div>                                   
+                                     </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-lg-6 col-sm-6 product--item" data-categories="female" data-size="size-l" data-styles="t-shirt" data-brand="hm">
+                                    <div class="product-wrap mb-25">
+                                        <div class="product-img">
+                                            <a href="product-details-4.html">
+                                                <img class="default-img" src="images/home/female-product-4.jpg" ng-model="carModel.id1" ng-bind="carModel.id1">
+                                                <img class="hover-img" src="images/home/female-product-4-1.jpg" alt="">
+                                            </a>
+                                            <span class="purple">Best Seller</span>
+                                            <div class="product-action">
+                                                <div class="pro-same-action pro-cart add-cart">
+                                                    <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id1)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                                </div>
+                                                <button type="button" class="btn-compare" data="4">Compare</button>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3 class="female"><a class="t-shirt" href="product-details-4.html" ng-model="carModel.brand1" ng-bind="carModel.brand1">Beautiful T-shirt </a></h3>
+                                            <h5 class="hm">H&M</h5>
+                                            <div class="product-price">
+                                                <span class="size-l" ng-model="carModel.price1" ng-bind="'$' + carModel.price1 + '.00'">$27.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-lg-6 col-sm-6 product--item" data-categories="both" data-size="size-s" data-styles="t-shirt" data-brand="gucci">
+                                    <div class="product-wrap mb-25">
+                                        <div class="product-img">
+                                            <a href="product-details-7.html">
+                                                <img class="default-img" src="images/home/male-product-1.png" ng-model="carModel.id2" ng-bind="carModel.id2">
+                                                <img class="hover-img" src="images/home/male-product-1-1.png" alt="">
+                                            </a>
+                                            <span class="purple">Best Seller</span>
+                                            <div class="product-action">
+                                                
+                                                <div class="pro-same-action pro-cart add-cart">
+                                                    <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id2)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                                </div>
+                                                <button type="button" class="btn-compare" data="7">Compare</button>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3 class="male"><a class="t-shirt" href="product-details-7.html" ng-model="carModel.brand2" ng-bind="carModel.brand2">Shorthand T-shirt</a></h3>
+                                            <h5 class="gucci">Gucci</h5>
+                                            <div class="product-price">
+                                                <span class="size-s" ng-model="carModel.price2" ng-bind="'$' + carModel.price2 + '.00'">$30.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-lg-6 col-sm-6 product--item" data-categories="female" data-size="size-m" data-styles="dress" data-brand="gucci">
+                                    <div class="product-wrap mb-25">
+                                        <div class="product-img">
+                                            <a href="product-details-1.html">
+                                                <img class="default-img" src="images/home/female-product-1.jpg" ng-model="carModel.id3" ng-bind="carModel.id3">
+                                                <img class="hover-img" src="images/home/female-product-1-1.jpg" alt="">
+                                            </a>
+                                            <span class="purple">Best Seller</span>
+                                            <div class="product-action">
+                                                
+                                                <div class="pro-same-action pro-cart add-cart">
+                                                    <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id3)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                                </div>
+                                                <button type="button" class="btn-compare" data="1">Compare</button>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3 class="female"><a href="product-details-1.html" ng-model="carModel.brand3" ng-bind="carModel.brand3"></a> </a></h3>
+                                            <h5 class="gucci">Gucci</h5>
+                                            <div class="product-price">
+                                                <span ng-model="carModel.price3" ng-bind="'$' + carModel.price3 + '.00'">$120.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-lg-6 col-sm-6 product--item" data-categories="male" data-size="size-s" data-styles="vest" data-brand="lv">
+                                    <div class="product-wrap mb-25">
+                                        <div class="product-img">
+                                            <a href="product-details-9.html">
+                                                <img class="default-img" src="images/home/male-product-4.jpg" ng-model="carModel.id4" ng-bind="carModel.id4">
+                                                <img class="hover-img" src="images/home/male-product-4-1.jpg" alt="">
+                                            </a>
+                                            <span class="purple">Best Seller</span>
+                                            <div class="product-action">
+                                                <div class="pro-same-action pro-cart add-cart">
+                                                    <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id4)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                                </div>
+                                                <button type="button" class="btn-compare" data="9">Compare</button>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3 class="male"><a class="vest" href="product-details-9.html" ng-model="carModel.brand4" ng-bind="carModel.brand4">Office Vest </a></h3>
+                                            <h5 class="lv">Louis Vuitton</h5>
+                                            <div class="product-price">
+                                                <span class="size-s" ng-model="carModel.price4" ng-bind="'$' + carModel.price4 + '.00'">$135.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-lg-6 col-sm-6 product--item" data-categories="both" data-size="size-l" data-styles="coat" data-brand="lv">
+                                    <div class="product-wrap mb-25">
+                                        <div class="product-img">
+                                            <a href="product-details-2.html">
+                                                <img class="default-img" src="images/home/female-product-2.jpg" ng-model="carModel.id5" ng-bind="carModel.id5">
+                                                <img class="hover-img" src="images/home/female-product-2-1.jpg" alt="">
+                                            </a>
+                                            <span class="purple">Best Seller</span>
+                                            <div class="product-action">
+                                                <div class="pro-same-action pro-cart add-cart">
+                                                    <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id5)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                                </div>
+                                                <button type="button" class="btn-compare" data="2">Compare</button>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3 class="female"><a class="coat" href="product-details-2.html" ng-model="carModel.brand5" ng-bind="carModel.brand5">Autumn Coat </a></h3>
+                                            <h5 class="lv">Louis Vuitton</h5>                               
+                                            <div class="product-price">
+                                                <span class="size-l" ng-model="carModel.price5" ng-bind="'$' + carModel.price5 + '.00'">$85.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-lg-6 col-sm-6 product--item" data-categories="both" data-size="size-m" data-styles="coat" data-brand="hm">
+                                    <div class="product-wrap mb-25">
+                                        <div class="product-img">
+                                            <a href="product-details-5.html">
+                                                <img class="default-img" src="images/home/male-product-3.png" ng-model="carModel.id6" ng-bind="carModel.id6">
+                                                <img class="hover-img" src="images/home/male-product-3-1.png" alt="">
+                                            </a>
+                                            <span class="purple">Best Seller</span>
+                                            <div class="product-action">
+                                                <div class="pro-same-action pro-cart add-cart">
+                                                    <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id6)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                                </div>
+                                                <button type="button" class="btn-compare" data="5">Compare</button>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3 class="male"><a class="nike" href="product-details-5.html" ng-model="carModel.brand6" ng-bind="carModel.brand6">Autumn Jacket 1</a></h3>
+                                            <h5 class="hm">H&M</h5>
+                                            <div class="product-price">
+                                                <span class="size-l" ng-model="carModel.price6" ng-bind="'$' + carModel.price6 + '.00'">$13.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-lg-6 col-sm-6 product--item" data-categories="male" data-size="size-m" data-styles="vest" data-brand="gucci">
+                                    <div class="product-wrap mb-25">
+                                        <div class="product-img">
+                                            <a href="product-details-3.html">
+                                                <img class="default-img" src="images/home/female-product-3.jpg"  ng-model="carModel.id7" ng-bind="carModel.id7">
+                                                <img class="hover-img" src="images/home/female-product-3-1.jpg" alt="">
+                                            </a>
+                                            <span class="purple">Best Seller</span>
+                                            <div class="product-action">
+                                                <div class="pro-same-action pro-cart add-cart">
+                                                    <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id7)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                                </div>
+                                                <button type="button" class="btn-compare" data="3">Compare</button>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3 class="female"><a class="vest" href="product-details-3.html" ng-model="carModel.brand7" ng-bind="carModel.brand7">Style Vest </a></h3>
+                                            <h5 class="gucci">Gucci</h5>                                
+                                            <div class="product-price">
+                                                <span class="size-s" ng-model="carModel.price7" ng-bind="'$' + carModel.price7 + '.00'">$160.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 col-lg-6 col-sm-6 product--item" data-categories="female" data-size="size-l" data-styles="coat" data-brand="hm">
+                                    <div class="product-wrap mb-25">
+                                        <div class="product-img">
+                                            <a href="product-details-6.html">
+                                                <img class="default-img" src="images/home/male-product-4.png" ng-model="carModel.id8" ng-bind="carModel.id8">
+                                                <img class="hover-img" src="images/home/male-product-4-1.png" alt="">
+                                            </a>
+                                            <span class="purple">New Arrival</span>
+                                            <div class="product-action">
+                                                <div class="pro-same-action pro-cart add-cart">
+                                                    <a title="Add To Cart" href="javascript:void(0)" ng-click="Add(carModel.id8)"><i class="pe-7s-cart"></i> Add to cart</a>
+                                                </div>
+                                                <button type="button" class="btn-compare" data="6">Compare</button>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h3 class="male"><a class="nike" href="product-details-6.html" ng-model="carModel.brand8" ng-bind="carModel.brand8">Autumn Jacket 2</a></h3>
+                                            <h5 class="hm">H&M</h5>
+                                            <div class="product-price">
+                                                <span class="size-m" ng-model="carModel.price8" ng-bind="'$' + carModel.price8 + '.00'">$13.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="pro-pagination-style text-center mt-30">
+                        <ul>         
+                            <li><a class="prev" href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                            <li><a class="active" href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a class="next" href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="sidebar-style mr-30">
+                    <div class="sidebar-widget">
+                        <h4 class="pro-sidebar-title">Search </h4>
+                        <div class="pro-sidebar-search mb-50 mt-25">
+                            <form class="pro-sidebar-search-form" action="#">
+                                <input type="text" placeholder="Search here...">
+                                <button id="searchTableBtn">
+                                    <i class="pe-7s-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4 class="pro-sidebar-title">Catagories</h4>
+                        <div class="sidebar-widget-list mt-30">
+                            <ul class="filter__ul" data="categories">
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <label>
+                                            <input class="filter__input" value="male" type="checkbox">
+                                            <a href="javascript:void(0)">Male</a>
+                                            <span class="checkmark"></span> 
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <label>
+                                            <input class="filter__input" value="female" type="checkbox">
+                                            <a href="javascript:void(0)">Female</a>
+                                            <span class="checkmark"></span> 
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <label>
+                                            <input class="filter__input" value="both" type="checkbox">
+                                            <a href="javascript:void(0)">Unisex</a>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget mt-50">
+                        <h4 class="pro-sidebar-title">Style</h4>
+                        <div class="sidebar-widget-list mt-20">
+                            <ul class="filter__ul" data="styles">
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="t-shirt"> 
+                                        <a href="javascript:void(0)">T-Shirt</a>
+                                        <span class="checkmark"></span> 
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="dress"> 
+                                        <a href="javascript:void(0)">Dress</a>
+                                        <span class="checkmark"></span> 
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="vest"> 
+                                        <a href="javascript:void(0)">Vest</a>
+                                        <span class="checkmark"></span> 
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="coat"> 
+                                        <a href="javascript:void(0)">Coat</a>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget mt-40">
+                        <h4 class="pro-sidebar-title">Size</h4>
+                        <div class="sidebar-widget-list mt-20">
+                            <ul class="filter__ul" data="size">
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="size-s">
+                                        <a href="javascript:void(0)">S</a>
+                                        <span class="checkmark"></span> 
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="size-m">
+                                        <a href="javascript:void(0)">M</a>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="size-l">
+                                        <a href="javascript:void(0)">L</a>
+                                        <span class="checkmark"></span> 
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget mt-50">
+                        <h4 class="pro-sidebar-title">Brand</h4>
+                        <div class="sidebar-widget-list mt-20">
+                            <ul class="filter__ul" data="brand">
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="gucci">
+                                        <a href="javascript:void(0)">Gucci</a>
+                                        <span class="checkmark"></span> 
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="nike">
+                                        <a href="javascript:void(0)">Nike</a>
+                                        <span class="checkmark"></span> 
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="lv"> 
+                                        <a href="javascript:void(0)">Louis Vuitton</a>
+                                        <span class="checkmark"></span> 
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-widget-list-left">
+                                        <input class="filter__input" type="checkbox" value="hm">
+                                        <a href="javascript:void(0)">H&M</a>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer-area bg-gray pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="copyright mb-30">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img alt="" src="images/logo/logo.png"> </a>
+                        </a>
+                    </div>
+                    <p>© 2022 <a href="#">BE$T PRICE</a>.<br> All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-30">
+                    <div class="footer-title">
+                        <h3><b>SITE MAP</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-50">
+                    <div class="footer-title">
+                        <h3><b>CATEGORIES</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Male</a></li>
+                            <li><a href="#">FeMale</a></li>
+                            <li><a href="#">Both Male & Female</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-75">
+                    <div class="footer-title">
+                        <h3><b>FOLLOW US</b></h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-70">
+                    <div class="footer-title">
+                        <h3><B>SUBSCRIBE</B></h3>
+                    </div>
+                    <div class="subscribe-style">
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <div id="mc_embed_signup" class="subscribe-form">
+                            <form id="mc-embedded-subscribe-form" class="validate" novalidate="" target="_blank"
+                                name="mc-embedded-subscribe-form" method="post"
+                                action="">
+                                <div id="mc_embed_signup_scroll" class="mc-form">
+                                    <input class="email" type="email" required=""
+                                        placeholder="Enter your email here.." name="EMAIL" value="">
+                                    <div class="mc-news" aria-hidden="true">
+                                        <input type="text" value="" tabindex="-1"
+                                            name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
+                                    </div>
+                                    <div class="clear">
+                                        <input id="mc-embedded-subscribe" class="button" type="button"
+                                            name="subscribe" value="Subscribe" onclick="thongbao()">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- All JS is here
+============================================ -->
+<script>
+    function thongbao(){
+        alert("Thank you for SUBSCRIBE!!");
+    }
+</script>
+
+<aside id="compare-box">
+    <div class="list"></div>
+    <button type="button" class="run" disabled>Compare</button>
+</aside>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <div class="tab-content quickview-big-img">
+                            <div id="pro-1" class="tab-pane fade show active">
+                                <img src="assets/img/product/quickview-l1.jpg" alt="">
+                            </div>
+                            <div id="pro-2" class="tab-pane fade">
+                                <img src="assets/img/product/quickview-l2.jpg" alt="">
+                            </div>
+                            <div id="pro-3" class="tab-pane fade">
+                                <img src="assets/img/product/quickview-l3.jpg" alt="">
+                            </div>
+                            <div id="pro-4" class="tab-pane fade">
+                                <img src="assets/img/product/quickview-l2.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- Thumbnail Large Image End -->
+                        <!-- Thumbnail Image End -->
+                        <div class="quickview-wrap mt-15">
+                            <div class="quickview-slide-active owl-carousel nav nav-style-1" role="tablist">
+                                <a class="active" data-bs-toggle="tab" href="#pro-1"><img src="assets/img/product/quickview-s1.jpg" alt=""></a>
+                                <a data-bs-toggle="tab" href="#pro-2"><img src="assets/img/product/quickview-s2.jpg" alt=""></a>
+                                <a data-bs-toggle="tab" href="#pro-3"><img src="assets/img/product/quickview-s3.jpg" alt=""></a>
+                                <a data-bs-toggle="tab" href="#pro-4"><img src="assets/img/product/quickview-s2.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="product-details-content quickview-content">
+                            <h2>Products Name Here</h2>
+                            <div class="product-details-price">
+                                <span>$18.00 </span>
+                                <span class="old">$20.00 </span>
+                            </div>
+                            <div class="pro-details-rating-wrap">
+                                <div class="pro-details-rating">
+                                    <i class="fa fa-star-o yellow"></i>
+                                    <i class="fa fa-star-o yellow"></i>
+                                    <i class="fa fa-star-o yellow"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <span>3 Reviews</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim venialo quis nostrud exercitation ullamco</p>
+                            <div class="pro-details-list">
+                                <ul>
+                                    <li>- 0.5 mm Dail</li>
+                                    <li>- Inspired vector icons</li>
+                                    <li>- Very modern style  </li>
+                                </ul>
+                            </div>
+                            <div class="pro-details-size-color">
+                                <div class="pro-details-color-wrap">
+                                    <span>Color</span>
+                                    <div class="pro-details-color-content">
+                                        <ul>
+                                            <li class="blue"></li>
+                                            <li class="maroon active"></li>
+                                            <li class="gray"></li>
+                                            <li class="green"></li>
+                                            <li class="yellow"></li>
+                                            <li class="white"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pro-details-size">
+                                    <span>Size</span>
+                                    <div class="pro-details-size-content">
+                                        <ul>
+                                            <li><a href="#">s</a></li>
+                                            <li><a href="#">m</a></li>
+                                            <li><a href="#">l</a></li>
+                                            <li><a href="#">xl</a></li>
+                                            <li><a href="#">xxl</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pro-details-quality">
+                                <div class="cart-plus-minus">
+                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+                                </div>
+                                <div class="pro-details-cart btn-hover">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                                <div class="pro-details-wishlist">
+                                    <a href="#"><i class="fa fa-heart-o"></i></a>
+                                </div>
+                                <div class="pro-details-compare">
+                                    <a href="#"><i class="pe-7s-shuffle"></i></a>
+                                </div>
+                            </div>
+                            <div class="pro-details-meta">
+                                <span>Categories :</span>
+                                <ul>
+                                    <li><a href="#">Minimal,</a></li>
+                                    <li><a href="#">Furniture,</a></li>
+                                    <li><a href="#">Electronic</a></li>
+                                </ul>
+                            </div>
+                            <div class="pro-details-meta">
+                                <span>Tag :</span>
+                                <ul>
+                                    <li><a href="#">Fashion, </a></li>
+                                    <li><a href="#">Furniture,</a></li>
+                                    <li><a href="#">Electronic</a></li>
+                                </ul>
+                            </div>
+                            <div class="pro-details-social">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="product-compare" tabindex="-1" data-bs-backdrop="static" aria-labelledby="product-compare-label" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="product-compare-label">Product Comparision</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="product-compare-detail">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Product</th>
+                            <td>
+                                <div class="compare--photo"><img src="images/home/female-product-1.jpg" alt="Spring Dress"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <td>
+                                <div class="compare--name">Spring Dress</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Deals</th>
+                            <td>
+                                <div class="compare--type">Best Sellers</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Price</th>
+                            <td>
+                                <div class="compare--price">$120.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Size</th>
+                            <td>
+                                <div class="compare--size">
+                                    <span>S</span>
+                                    <span>M</span>
+                                    <span>L</span>
+                                    <span>XL</span>
+                                    <span>XXL</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Categories</th>
+                            <td>
+                                <div class="compare--categories">Female</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Style</th>
+                            <td>
+                                <div class="compare--style">Dress</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Brand</th>
+                            <td>
+                                <div class="compare--brand">Gucci</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td>
+                                <div class="compare--weight">450 g</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>
+                                <div class="compare--age">20 to 35</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Dimensions</th>
+                            <td>
+                                <div class="compare--dimensions">10 x 10 x 15 cm</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Materials</th>
+                            <td>
+                                <div class="compare--materials">60% cotton, 40% polyester</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Collection</th>
+                            <td>
+                                <div class="compare--collection">Spring</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Made in</th>
+                            <td>
+                                <div class="compare--provenance">Italy</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Other info</th>
+                            <td>
+                                <div class="compare--other">American standard QC</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal end -->
+
+<!-- All JS is here
+============================================ -->
+
+<script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
+<script src="assets/js/vendor/jquery-v3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<!-- Ajax Mail -->
+<script src="assets/js/ajax-mail.js"></script>
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
+
+<script>
+    const PRODUCT_COMPARE = {
+            1: {
+                id: 1,
+                type: 'Best Sellers',
+                name: 'Spring Dress',
+                price: '$120.00',
+                url: 'product-details-1.html',
+                photo: 'images/home/female-product-1.jpg',
+                size: {
+                    s: true,
+                    m: true,
+                    l: true,
+                    xl: true,
+                    xxl: true,
+                },
+                categories: 'Female',
+                style: 'Dress',
+                brand: 'Gucci',
+                weight: '450 g',
+                age: '20 to 35',
+                dimensions: '10 x 10 x 15 cm',
+                materials: '60% cotton, 40% polyester',
+                collection: 'Spring',
+                provenance: 'Italy',
+                other: 'American standard QC',
+            },
+            2: {
+                id: 2,
+                type: 'Best Sellers',
+                name: 'Autumn Coat',
+                price: '$85.00',
+                url: 'product-details-2.html',
+                photo: 'images/home/female-product-2.jpg',
+                size: {
+                    s: true,
+                    m: true,
+                    l: true,
+                    xl: true,
+                    xxl: true,
+                },
+                categories: 'Female',
+                style: 'Coat/Jacket',
+                brand: 'Louis Vuitton',
+                weight: '600g',
+                age: '25 to 40',
+                dimensions: '12 x 12 x 18 cm',
+                materials: '40% cotton, 60% polyester',
+                collection: 'Autumn',
+                provenance: 'Korea',
+                other: 'EU standard QC',
+            },
+            3: {
+                id: 3,
+                type: 'Best Sellers',
+                name: 'Style Vest',
+                price: '$160.00',
+                url: 'product-details-3.html',
+                photo: 'images/home/female-product-3.jpg',
+                size: {
+                    s: true,
+                    m: true,
+                    l: true,
+                    xl: true,
+                    xxl: true,
+                },
+                categories: 'Female',
+                style: 'Vest',
+                brand: 'Gucci',
+                weight: '500g',
+                age: '24 to 40',
+                dimensions: '11 x 11 x 16 cm',
+                materials: '55% cotton, 45% polyester',
+                collection: 'Professional style',
+                provenance: 'UK',
+                other: 'EU standard QC',
+            },
+            4: {
+                id: 4,
+                type: 'Best Sellers',
+                name: 'Beautiful T-shirt',
+                price: '$27.00',
+                url: 'product-details-4.html',
+                photo: 'images/home/female-product-4.jpg',
+                size: {
+                    s: true,
+                    m: true,
+                    l: true,
+                    xl: true,
+                    xxl: true,
+                },
+                categories: 'Female',
+                style: 'T-Shirt',
+                brand: 'H&M',
+                weight: '450g',
+                age: '18 to 25',
+                dimensions: '9 x 9 x 13 cm',
+                materials: '85% cotton, 15% polyester',
+                collection: 'Summer',
+                provenance: 'China',
+                other: 'Asia style',
+            },
+            5: {
+                id: 5,
+                type: 'Best Sellers',
+                name: 'Autumn Jacket 1',
+                price: '$13.00',
+                url: 'product-details-5.html',
+                photo: 'images/home/male-product-3.png',
+                size: {
+                    s: true,
+                    m: true,
+                    l: true,
+                    xl: true,
+                    xxl: true,
+                },
+                categories: 'Male',
+                style: 'Coat/Jacket',
+                brand: 'H&M',
+                weight: '700g',
+                age: '20 to 35',
+                dimensions: '15 x 15 x 30 cm',
+                materials: '70% cotton, 30% polyester',
+                collection: 'Autumn',
+                provenance: 'France',
+                other: 'EU standard QC',
+            },
+            6: {
+                id: 6,
+                type: 'Best Sellers',
+                name: 'Autumn Jacket 2',
+                price: '$13.00',
+                url: 'product-details-6.html',
+                photo: 'images/product-image/male-product-2.png',
+                size: {
+                    s: true,
+                    m: true,
+                    l: true,
+                    xl: true,
+                    xxl: true,
+                },
+                categories: 'Male',
+                style: 'Coat/Jacket',
+                brand: 'H&M',
+                weight: '700g',
+                age: '20 to 35',
+                dimensions: '15 x 15 x 30 cm',
+                materials: '70% cotton, 30% polyester',
+                collection: 'Autumn',
+                provenance: 'France',
+                other: 'EU standard QC',
+            },
+            7: {
+                id: 7,
+                type: 'Best Sellers',
+                name: 'Shorthand T-shirt',
+                price: '$30.00',
+                url: 'product-details-7.html',
+                photo: 'images/home/male-product-1.png',
+                size: {
+                    s: true,
+                    m: true,
+                    l: true,
+                    xl: true,
+                    xxl: true,
+                },
+                categories: 'Male',
+                style: 'T-Shirt',
+                brand: 'Gucci',
+                weight: '600g',
+                age: '20 to 27',
+                dimensions: '10 x 10 x 15 cm',
+                materials: '85% cotton, 15% polyester',
+                collection: 'Autumn',
+                provenance: 'Viet Nam',
+                other: 'Asia standard QC',
+            },
+            8: {
+                id: 8,
+                type: 'Best Sellers',
+                name: 'Long-Hand T-shirt',
+                price: '$42.00',
+                url: 'product-details-8.html',
+                photo: 'images/home/male-product-2.png',
+                size: {
+                    s: true,
+                    m: true,
+                    l: true,
+                    xl: true,
+                    xxl: true,
+                },
+                categories: 'Male',
+                style: 'T-Shirt',
+                brand: 'Gucci',
+                weight: '650g',
+                age: '20 to 27',
+                dimensions: '12 x 12 x 17 cm',
+                materials: '75% cotton, 25% polyester',
+                collection: 'Autumn',
+                provenance: 'Viet Nam',
+                other: 'Asia standard QC',
+            },
+            9: {
+                id: 9,
+                type: 'Best Sellers',
+                name: 'Office Vest',
+                price: '$135.00',
+                url: 'product-details-9.html',
+                photo: 'images/product-image/male-product-5.jpg',
+                size: {
+                    s: true,
+                    m: true,
+                    l: true,
+                    xl: true,
+                    xxl: true,
+                },
+                categories: 'Male',
+                style: 'Vest',
+                brand: 'Louis Vuitton',
+                weight: '750g',
+                age: '30 to 40',
+                dimensions: '15 x 15 x 20 cm',
+                materials: '25% cotton, 35% polyester, 40% others',
+                collection: 'Vest',
+                provenance: 'Italy',
+                other: 'EU standard QC',
+            },
+        };
+</script>
+
+</body>
+</html>
