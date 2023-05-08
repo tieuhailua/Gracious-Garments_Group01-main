@@ -16,5 +16,5 @@ Project title: Gracious Garments
   
      eProject documentation at
  
-    eProject published at: https://tieuhailua.github.io/Gracious-Garments_Group01-main/
+    eProject published at: https://tieuhailua.github.io/Gracious-Garments_Group01-main
  
