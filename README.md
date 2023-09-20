@@ -7,7 +7,7 @@ Project title: Gracious Garments
 
 ========> Group 01 <=========
 
-3 collaborators:
+ collaborators:
 
   Student1370240  Bùi Minh Tín 
   Student1370244  Nguyễn Lý Hon  
